@@ -1,0 +1,18 @@
+<!DOCTYPE html> <!--Define o tipo de documento como HTML5.-->
+<html lang="pt">
+<head>
+    <meta charset="UTF-8"> <!--Define a codificação de caracteres para UTF-8.-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Ajusta a escala da página para dispositivos móveis.-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Verificação de Idade</title>
+</head>
+<body>
+    <h1>Verifique se você é maior ou menor de idade</h1>
+    <form method="POST"> <!--O formulário ( <form method="POST">) envia os dados para o servidor quando o botão é clicado.-->
+        <label for="idade">Idade: </label> <!--cria uma etiqueta para o campo de entrada (input) da idade. O atributo for="idade"faz a associação entre o rótulo e o campo de entrada com o id="idade"-->
+        <input type="number" id="idade" name="idade" required> <!--permite ao usuário inserir a idade, e o botão de envio-->
+        <button type="submit">Verificar</button> <!--envia os dados.-->
+    </form>
+    <p>{{ mensagem }}</p> <!--mostra a resposta retornada pelo servidor (a variável mensagemque foi enviada pelo Flask).-->
+</body>
+</html>

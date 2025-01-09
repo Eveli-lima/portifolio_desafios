@@ -1,0 +1,12 @@
+[project]
+name = "estudo"
+version = "0.1.0"
+description = "Estudo de programacão, quero estudar a lógica e exibir os resultados em um site"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "anyio>=4.8.0",
+    "certifi>=2024.12.14",
+    "charset-normalizer>=3.4.1",
+    "httpx>=0.28.1",
+]
