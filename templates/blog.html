@@ -1,0 +1,100 @@
+<!DOCTYPE html> <!--Define o tipo de documento como HTML5.-->
+<html lang="pt">
+<head>
+    <meta charset="UTF-8"> <!--Define a codificação de caracteres para UTF-8.-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Ajusta a escala da página para dispositivos móveis.-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/global.css') }}">
+    <title>Blog</title>
+    <style>
+
+    #hero {
+    background-image: url('/static/images/fundo.jpg');
+    background-size: cover;
+    background-position: height;
+    background-repeat: no-repeat;
+    }
+    .conteiner {
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .right-sidebar ul {
+        list-style: none;
+    }
+
+    .right-sidebar ul li a {
+        text-decoration: none;
+        color: #333;
+    }
+
+    .right-sidebar ul li a:houver {
+        text-decoration: underline;
+    }
+
+    main {
+    background: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .left-sidebar {
+        background: #D3E1E4;
+        padding: 15px;
+        boder-radius: 5px;
+    }
+
+    .left-sidebar ul {
+        list-style: none;
+    }
+    </style>
+
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <h1>Blog</h1>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+            </ul>
+        </nav>
+    </header>
+<!-- Sobre -->
+    <section id="hero">
+        <h2>Projeto</h2>
+        <p>Junior em 6 meses</p>
+    </section>
+
+<!-- Layout 3 colunas -->
+    <!-- coluna da esquerda (menu de artigos) -->
+    <div class="conteiner">
+        <aside>
+            <h2>Widgets</h2>
+            <ul>
+                <li><a href="#">Categorias</a></li>
+
+            </ul>
+
+
+        </aside>
+        <!-- coluna central (conteúdo principal) -->
+        <main>
+            <article>
+                <h2>Mês 1 - Fundamentos de programação</h2>
+                <p>conteúdo</p>
+
+            </article>
+        </main>
+        <!-- Coluna da esquerda (widgets) -->
+        <aside>
+            <ul>
+                <li><a href="#">Postasgens recentes</a></li>
+            </ul>
+        </aside>
+    </div>
+
+</body>
+</html>

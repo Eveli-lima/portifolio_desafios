@@ -3,13 +3,12 @@
 # Utilize uma estrutura condicional if-else para fazer a verificação.
 # Dica: Utilize input() para capturar a idade do usuário, e a função int() para converter a entrada para um número inteiro.
 
-# idade = int(input('Idade: '))
-# def comparar_idade(idade):
-#     if idade >= 18:
-#         return f'A pessoa com {idade} é maior de idade.'
-#     else:
-#         return f'A pessoa com {idade} é menor de idade.'
-#------------------------------------------------------
+idade = int(input('Idade: '))
+def comparar_idade(idade):
+    if idade >= 18:
+        return f'A pessoa com {idade} é maior de idade.'
+    else:
+        return f'A pessoa com {idade} é menor de idade.'
 
 #------------------------------------------------
 #
@@ -373,12 +372,12 @@
 
 # Faça um programa que pergunte ao usuário sua idade e ele tenha CNH.
 # Informe se ele pode dirigir ou não.
-
-idade = int(input("Qual a sua idade? "))
-cnh = str(input("Voce tem CNH? Responda: s ou n "))
-
-if idade >= 18 and cnh == s:
-    print("Você pode dirigir!")
-else:
-    print("Você não pode dirigir!")
+#
+# idade = int(input("Qual a sua idade? "))
+# cnh = str(input("Voce tem CNH? Responda: s ou n "))
+#
+# if idade >= 18 and cnh == s:
+#     print("Você pode dirigir!")
+# else:
+#     print("Você não pode dirigir!")
 

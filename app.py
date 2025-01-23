@@ -21,6 +21,11 @@ def comparar_idade_view(): # o sufixo view indica que a função é responsável
         mensagem = comparar_idade(idade)  # Usando a função importada
     return render_template('pag_exercicios.html', mensagem=mensagem)
 
+# Definir rota para blog:
+@app.route('/blog')
+def blog():
+    return render_template('blog.html')
+
 # Rodando a aplicação:
 # Esse bloco de código garante que o servidor Flask seja iniciado apenas quando o script for executado diretamente (e não importado como módulo).
 if __name__ == '__main__':
