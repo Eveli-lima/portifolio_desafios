@@ -1,0 +1,103 @@
+<!DOCTYPE html> <!--Define o tipo de documento como HTML5.-->
+<html lang="pt">
+<head>
+    <meta charset="UTF-8"> <!--Define a codificação de caracteres para UTF-8.-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Ajusta a escala da página para dispositivos móveis.-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/global.css') }}">
+    <title>Éveli Lima - Portfólio</title>
+</head>
+<body>
+
+    <!-- Cabeçalho -->
+    <header>
+        <div class="logo">
+            <h1>Éveli Lima</h1> <!-- Logotipo ou nome principal -->
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#trabalhos">Trabalhos</a></li>
+                <li><a href="{{ url_for('blog') }}">Blog</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Banner ou Hero Section -->
+    <section id="hero">
+        <h2>Olá, eu sou Éveli Lima</h2>
+        <p>Bem vindo ao meu portifólio!</p>
+        <a href="#trabalhos" class="btn">Ver Trabalhos</a>
+        <img src="sua-foto.jpg" alt="Foto sua" />
+    </section>
+
+    <!-- Sobre -->
+    <section id="sobre">
+        <h2>Sobre Mim</h2>
+        <p>Breve descrição sobre sua trajetória, habilidades e o que você oferece.</p>
+
+    </section>
+
+    <!-- Trabalhos ou Portfólio -->
+    <section id="trabalhos">
+        <h2>Meus Trabalhos</h2>
+        <div class="portfolio-grid">
+            <article>
+                <img src="trabalho1.jpg" alt="Trabalho 1">
+                <h3>Projeto 1</h3>
+                <p>Descrição breve do projeto.</p>
+                <a href="projeto1.html">Saiba mais</a>
+            </article>
+            <article>
+                <img src="trabalho2.jpg" alt="Trabalho 2">
+                <h3>Projeto 2</h3>
+                <p>Descrição breve do projeto.</p>
+                <a href="projeto2.html">Saiba mais</a>
+            </article>
+            <!-- Adicione mais artigos conforme necessário -->
+        </div>
+    </section>
+
+    <!-- estudos -->
+    <section id="estudo">
+        <h2>O que eu faço</h2>
+        <ul>
+            <li><a href="{{ url_for('comparar_idade_view') }}">Estudos</a></li>
+            <li>Design gráfico</li>
+            <li>Edição de vídeos</li>
+            <li>Criação de identidade visual</li>
+            <li>Produção de conteúdo digital</li>
+        </ul>
+    </section>
+
+    <!-- Contato -->
+    <section id="contato">
+        <h2>Entre em Contato</h2>
+        <p>Gostou do meu trabalho? Vamos conversar!</p>
+        <form action="enviar-contato.php" method="post">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="mensagem">Mensagem:</label>
+            <textarea id="mensagem" name="mensagem" required></textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2025 Seu Nome. Todos os direitos reservados.</p>
+        <ul>
+            <li><a href="https://www.linkedin.com">LinkedIn</a></li>
+            <li><a href="https://github.com">GitHub</a></li>
+            <li><a href="https://www.instagram.com">Instagram</a></li>
+        </ul>
+    </footer>
+
+
+</body>
+</html>
